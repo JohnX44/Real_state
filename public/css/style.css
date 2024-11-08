@@ -1,0 +1,362 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  /* Header Styling */
+  header {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  /* Main Heading and Subtext Styling */
+  .main-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+  
+  .sub-text {
+    color: #777;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+  
+  /* Image Section Styling */
+  .image-section {
+    position: relative;
+    margin-top: 3rem;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  /* Default Search Bar Styling (Mobile-friendly) */
+  .search-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 50px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px; /* Mobile-friendly width */
+    margin: 1.5rem auto 0 auto; /* Centered below the image */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search-bar input.form-control,
+  .search-bar select.form-select,
+  .search-bar button.btn {
+    width: 100%; /* Full-width for each element on mobile */
+    border-radius: 25px;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .search-bar button.btn {
+    padding: 0.5rem 1.5rem;
+    background-color: #000; /* Black button background */
+    color: #fff;
+    border: none;
+  }
+  
+  .search-bar button.btn:hover {
+    background-color: #333; /* Darker hover effect for button */
+  }
+  
+  /* Desktop Overlay Style */
+  @media (min-width: 768px) {
+    /* Adjust search bar for overlay effect on desktop */
+    .search-bar {
+      position: absolute;
+      bottom: -20px; /* Overlay position */
+      left: 50%;
+      transform: translateX(-50%);
+      flex-direction: row; /* Horizontal alignment */
+      width: 90%;
+      max-width: 1000px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+  
+    .search-bar input.form-control,
+    .search-bar select.form-select {
+      flex: 1; /* Ensures all fields are of equal width */
+      min-width: 0; /* Allows shrinking */
+      margin: 0;
+    }
+  
+    .search-bar button.btn {
+      width: auto;
+      margin: 0;
+    }
+  }
+  
+  /* Footer Styling */
+  .footer {
+    padding: 2rem 0;
+    background: #f8f9fa;
+    border-top: 1px solid #ddd;
+    color: #666;
+    text-align: center;
+  }
+  
+  .footer p {
+    font-size: 0.8rem;
+  }
+  
+
+  /* Navbar Styling */
+/* Navbar Styling */
+.navbar {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #007bff; /* Blue color for the brand text */
+    text-align: center;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #000;
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #666;
+  }
+  
+  /* Center "Aruna" Brand Text on Mobile */
+  @media (max-width: 992px) {
+    .navbar-brand {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    /* Stacked menu links with centered text on mobile */
+    .navbar-nav {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .navbar-nav .nav-link {
+      padding: 10px 0;
+      font-size: 1rem;
+    }
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Custom black icon */
+  }
+
+  /* What is Aruna Section */
+/* What is Aruna Section */
+.aruna-section {
+    position: relative;
+    height: 500px; /* Adjust height as needed */
+    overflow: hidden;
+  }
+  
+  .aruna-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes sure the video covers the whole section */
+  }
+  
+  .aruna-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* Places it above the video */
+  }
+  
+  .aruna-content {
+    color: #fff;
+    text-align: left;
+    max-width: 600px;
+    padding: 20px;
+    z-index: 2; /* Ensures the text is above the overlay */
+  }
+  
+  .aruna-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .aruna-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Play Button Styling */
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2; /* Ensures the play button is above the video and overlay */
+  }
+  
+  .property-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.property-card img {
+    width: 100%;
+    height: auto;
+}
+.property-details {
+    padding: 15px;
+}
+.details-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+.carousel-inner {
+  height: 100vh; /* Full-screen height */
+}
+
+.carousel-item video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* Gradient overlay for text */
+.overlay-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.overlay-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.overlay-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.property-card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  position: relative;
+}
+.property-card:hover {
+  transform: scale(1.05);
+}
+.property-image {
+  position: relative;
+  cursor: pointer;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.property-card:hover .overlay {
+  opacity: 1;
+}
+.details-content {
+  text-align: center;
+}
+.property-info {
+  text-align: center;
+  margin-top: 10px;
+}
+.property-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.property-location {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 3s ease-in-out; /* Smooth 2-second fade-in */
+}
+
+.fade.show {
+  opacity: 1;
+}
+
